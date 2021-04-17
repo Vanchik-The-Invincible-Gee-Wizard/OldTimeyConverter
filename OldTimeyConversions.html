@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style>
+    h1{
+      font-size: 50px;
+      color: #997300;
+      font-family: monospace;
+    }
+    img{
+      border: 10px solid #47476b;
+    }
+    body{
+      background-color: #C0C0C0;
+    }
+    </style>
+    <script>
+    function loop1()
+    {
+      var x = document.getElementById("num1").value;
+      x = parseInt(x);
+      var res = 0;
+      var string = "Miles to Furlongs: <br> <hr>";
+      for(var i = 1; i <= x; i++)
+      {
+        res = i*8;
+        string = string + i + "  --- " + res + "<br>";
+      }
+      document.getElementById("result").innerHTML = string;
+    }
+    function loop2()
+    {
+      var y = document.getElementById("num2").value;
+      y = parseInt(y);
+      var res = 0;
+      var string = "Slugs to Pounds: <br> <hr>";
+      for(var i = 1; i <= y; i++)
+      {
+        res = i*32.174;
+        string = string + i + "  --- " + res + "<br>";
+      }
+      document.getElementById("result").innerHTML = string;
+    }
+    function loop3()
+    {
+      var z = document.getElementById("num3").value;
+      z = parseInt(z);
+      var res = 0;
+      var string = "Fortnights to Days: <br> <hr>";
+      for(var i = 1; i <= z; i++)
+      {
+        res = i*14;
+        string = string + i + "  --- " + res + "<br>";
+      }
+      document.getElementById("result").innerHTML = string;
+    }
+    </script>
+  </head>
+
+    <body>
+    <h1> Old Timey Unit Converter </h1>
+    <img src = "wagon.jpg" height = "100px" width = "100px"> <br><hr>
+    <input type = "text" id = "num1" value = "Miles to Furlongs">
+    <input type = "button" value = "Enter" onclick = "loop1()">
+    <input type = "text" id = "num2" value = "Slugs to Pounds">
+    <input type = "button" value = "Enter" onclick = "loop2()">
+    <input type = "text" id = "num3" value = "Fortnights to Days">
+    <input type = "button" value = "Enter" onclick = "loop3()">
+    <p id = "result"></p>
+    </body>
+</html>
